@@ -83,7 +83,7 @@ CREATE TABLE IF NOT EXISTS product_category_name_translation
 );
 
 
--- Scripts to bulk load data
+-- Scripts to bulk load data sample
 
 LOAD DATA LOCAL INFILE 'D:/personal_projects/E2E_DimModel_Dashboard_Ecommerce_Olist/Olist/olist_order_reviews_dataset.csv' 
 INTO TABLE olist_order_reviews_dataset

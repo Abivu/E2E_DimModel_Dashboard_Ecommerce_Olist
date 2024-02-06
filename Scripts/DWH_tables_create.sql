@@ -4,6 +4,7 @@ CREATE TABLE IF NOT EXISTS DimCustomer
 (   CustomerKey Integer auto_increment Primary Key,
     CustomerID varchar(250),
     CustomerUniqueID varchar(250),
+    CustomerState varchar(250),
     CustomerCity varchar(250),
     CustomeZIPCode varchar(20),
     CustomeLat decimal(18, 15),
@@ -17,8 +18,8 @@ CREATE TABLE IF NOT EXISTS DimCustomer
 CREATE TABLE IF NOT EXISTS DimSeller 
 (   SellerKey Integer AUTO_INCREMENT Primary Key,
     SellerID varchar(250),
-    SellerCity varchar(250),
     SellerState varchar(250),
+    SellerCity varchar(250),
     SellerZIPCode varchar(20),
     SellerLat decimal(18, 15),
     SellerLng decimal(18, 15),

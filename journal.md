@@ -40,4 +40,6 @@ Changes in Dimensional tables
 Fact Tables dealing with changes
 
 
+### [050224]
 
+Write tables in DWH

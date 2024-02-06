@@ -1,4 +1,4 @@
-[130124]
+### [130124]
 Had trouble of loading data automatically by Python
 Switched to manual for now
 Created tables script - default datatypes varchar(1024). In practice, these tables are created and existed with
@@ -21,3 +21,23 @@ like the character "\"
 --> Solution: switched to Bulk loading will ignore that row having special character
 
 4. How to handle special characters in dataset?
+
+### [140124]
+
+Finished drawing OLTP ERD. 
+Applying the concepts:
+
+- Enterprise Data Warehouse Bus Architecture
+- Conformed dimensions
+- Slowly Changing Dimension Strategies
+
+### [200124]
+
+Completed Datawarehousing designs
+#### Design Challenges 
+
+Changes in Dimensional tables
+Fact Tables dealing with changes
+
+
+

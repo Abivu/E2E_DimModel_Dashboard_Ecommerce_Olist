@@ -32,9 +32,11 @@ CREATE TABLE IF NOT EXISTS DimSeller
 CREATE TABLE IF NOT EXISTS DimProduct 
 (   ProdKey Integer AUTO_INCREMENT Primary Key,
     ProdID varchar(250),
-    ProdtCatNameEng varchar(250),
+    ProdCatName varchar(250),
+    ProdCatNameEng varchar(250),
     ProdNameLgth Integer,
     ProdPhotoQty Integer,
+    ProdWeightG Integer,
     ProdLengthCM Integer,
     ProdHeightCM Integer,
     ProdWidthCM Integer,
@@ -56,15 +58,25 @@ CREATE TABLE IF NOT EXISTS DimPayMethod
 );
 
 
+CREATE TABLE IF NOT EXISTS DimGeolocation 
+(   GeoKey Integer AUTO_INCREMENT Primary Key,
+    GeoZipCode varchar(20),
+    GeoLat decimal(18, 15),
+    GeoLng decimal(18, 15),
+    GeoCity varchar(250),
+    GeoState varchar(250)
+);
+
+
 CREATE TABLE IF NOT EXISTS DimDate 
-(   DateKey varchar(10) Primary Key,
+(   DateKey varchar(10) PRIMARY KEY,
     DayOfWeek Integer,
     DayofMonth Integer,
     DayName varchar(15),
     Mnth Integer,
     MonthName varchar(15),
     Quartr Integer,
-    Year Integer,
+    Year Year,
     WeekendFlag tinyint,
     HolidayFlag tinyint,
     Season varchar(15),
@@ -88,6 +100,7 @@ CREATE TABLE IF NOT EXISTS FactOrderItem
     PaymentValue Float,
     PurchaseTimestamp datetime,
     ApprovedAt datetime,
+    ShippingLimitDate datetime,
     DeliveredCarrierDate datetime,
     DeliveredCustomerDate datetime,
     EstimatedDeliverDate datetime,
@@ -99,9 +112,11 @@ CREATE TABLE IF NOT EXISTS FactOrderReview
 (
     ReviewID varchar(250) Primary Key,
     OrderID varchar(250),
+    CustomerKey Integer,
+    SellerKey Integer,
     ReviewScore Integer,
     ReviewTitle varchar(250),
     ReviewMsg varchar(500),
-    ReviewCreationDate datetime,
-    ReviewAnswerTimestamp datetime
+    CreationDate datetime,
+    ReviewATimestamp datetime
 );

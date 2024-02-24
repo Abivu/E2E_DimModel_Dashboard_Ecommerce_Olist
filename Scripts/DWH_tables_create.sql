@@ -7,8 +7,6 @@ CREATE TABLE IF NOT EXISTS DimCustomer
     CustomerState varchar(250),
     CustomerCity varchar(250),
     CustomeZIPCode varchar(20),
-    CustomeLat decimal(18, 15),
-    CustomeLng decimal(18, 15),
     ValidFrom datetime,
     ValidTo datetime,
     IsCurrent tinyint
@@ -21,8 +19,6 @@ CREATE TABLE IF NOT EXISTS DimSeller
     SellerState varchar(250),
     SellerCity varchar(250),
     SellerZIPCode varchar(20),
-    SellerLat decimal(18, 15),
-    SellerLng decimal(18, 15),
     ValidFrom datetime,
     ValidTo datetime,
     IsCurrent tinyint
@@ -110,13 +106,11 @@ CREATE TABLE IF NOT EXISTS FactOrderItem
 
 CREATE TABLE IF NOT EXISTS FactOrderReview
 (
-    ReviewID varchar(250) Primary Key,
+    ReviewID varchar(250),
     OrderID varchar(250),
-    CustomerKey Integer,
-    SellerKey Integer,
     ReviewScore Integer,
     ReviewTitle varchar(250),
     ReviewMsg varchar(500),
     CreationDate datetime,
-    ReviewATimestamp datetime
+    ReviewTimestamp datetime
 );

@@ -8,12 +8,12 @@ password = "1234"
 
 # Lists of the tables
 dict_dim_tables = {
-    # DimCustomer_script: DimCustomer,
-    # DimSeller_script: DimSeller
-    # DimProduct_script: DimProduct,
-    # DimOrderStatus_script: DimOrderStatus,
-    # DimPayMethod_script: DimPayMethod,
-    # DimDate_script: DimDate
+    DimCustomer_script: DimCustomer,
+    DimSeller_script: DimSeller,
+    DimProduct_script: DimProduct,
+    DimOrderStatus_script: DimOrderStatus,
+    DimPayMethod_script: DimPayMethod,
+    DimDate_script: DimDate,
     DimGeolocation_script: DimGeolocation
 }
 
@@ -59,7 +59,7 @@ try:
     if connection.is_connected():
         print("Connected to the database")
     # Load the script
-        batch_size = 1000
+        batch_size = 10000
         offset = 0
         cursor = connection.cursor()
         # Count the number of records required to load in OLTP

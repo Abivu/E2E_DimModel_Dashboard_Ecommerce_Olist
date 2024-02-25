@@ -2,3 +2,8 @@
 
 Input: Raw datasource is from Kaggle. It includes 9 csv files simulated as OLTP Databases of Order.  
 Output: formatted data is loaded into a Data warehouse having a STAR schema. 
+
+
+## Data Integrity Issues
+
+- How can I ensure data loading is successful? (not missing any data/rows)

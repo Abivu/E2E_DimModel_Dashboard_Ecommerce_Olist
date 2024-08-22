@@ -16,17 +16,15 @@
 <br />
 <div align="center">
   <a href="https://github.com/github_username/repo_name">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="images/logo.jpeg" alt="Logo" width="160" height="160">
   </a>
 
 <h3 align="center">End-to-End Business Analytics: Building a Data Warehouse and Dynamic Dashboard Solution</h3>
 
   <p align="center">
-    The project includes ETL process, Datawarehouse design, Pull data from a data warehouse to BI platformo & design an interactive and insightful dashboards for business users
+    The project includes ETL process, Datawarehouse design, Pull data from a data warehouse to BI platform & design an interactive and insightful dashboards for business users.
     <br />
-    <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
+
   </p>
 </div>
 
@@ -49,6 +47,8 @@
         <a href="#data-pipeline-diagram"> Data Pipeline Diagram</a>
     <li>
         <a href="#dashboards"> Dashboards</a>
+    <li>
+        <a href="#contact"> Contact</a> 
   </ol>
 </details>
 
@@ -57,23 +57,25 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+<!-- [![Product Name Screen Shot][product-screenshot]](https://example.com)-->
 
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description`
 
-This project leverages a real-world Brazilian e-commerce dataset provided by **O'list** to analyze and visualize sales performance metrics. The dataset, comprising over 100,000 orders from 2016 to 2018, offers insights into overall sales & orders performance.
+This project leverages a real-world Brazilian e-commerce dataset provided by **O'list** to analyze and visualize sales performance metrics. The dataset, comprising over 100,000 orders from 2016 to 2018, offers insights into overall sales & delivery performance.
 
 **Data Processing and Analysis**
 
 To prepare the data for analysis, I performed the following steps:
 
-1. Consolidation: Combined the 9 CSV files into a unified dataset.
+1. Extracting: Extracted 9 csv files from source 
+2. Loading: Loaded each file into a pre-defined table in a database.
 2. Normalization: Standardized data formats and cleaned inconsistencies to ensure data quality.
-3. Data Warehousing: Populated a Snowflake data warehouse with a predesigned schema for efficient querying and analysis.
+3. Data Warehousing: Populated tables in data warehouse with a Snowflake schema for efficient querying and analysis.
+
+**!Note:** Data Quality Assessment will be implemented in the next phase of this project.
 
 **Visualization and Insights**
 
-Using Power BI, I developed interactive dashboards that showcase key sales/orders metrics including:
+Using Power BI, I transformed data & developed interactive dashboards that showcase key sales/orders metrics including:
 
 - Sales Performance: Monthly Transactions, Revenue, Average Order Value & Freight Value Per Order.
 - Delivery Performance: Total Late Deliveries, On-time Delivery Rate, Average Days of Delivery and Average NPS. 
@@ -88,7 +90,8 @@ These visualizations provide valuable insights for business stakeholders to make
 
 * [![Python][Python]][Python-url]
 * [![MySQL][MySQL]][MySQL-url]
-* [![Vue][Vue.js]][Vue-url]
+* <img src="./Power-BI.png" width="30" height="30">
+
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -102,10 +105,10 @@ In the repo, there are 3 folders:
 <ul> 
     <li> OLTP_tables_create: Online Transaction Processing Tables.
     <li> DWH_tables_create: Define Dimension and Fact tables.
-    <li> views_create: Define views in order to efficiently read performance if concurrent readingn occurs. <em>(However, I will not use these views to pull from data from PowerBI)</em> 
+    <li> views_create: Define views in order to efficiently read performance if concurrent readingn occurs. <em>(However, I will not use these views to pull data from PowerBI)</em> 
     <li> transform_load_scripts: the script to join between tables and populate the Dim/Fact Tables. This file will be read by the file load_script.py 
 </ul>
-<li> diagrams: diagrams of OLTP and DWH in database.
+<li> diagrams: diagrams of OLTP and DWH in database and data pipeline architecture.
 </ol>
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -136,9 +139,10 @@ Once successfully installed, download a dashboard file with extension .pbix. The
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
+I am open to discussion/feedback on how to effectively display dashboard to improve business users' engagements. Please reach out to me via
 
-Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
+Abi - discord: abivu711 - email: vu.ab.159@gmail.com
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -148,16 +152,7 @@ Project Link: [https://github.com/github_username/repo_name](https://github.com/
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/github_username/repo_name.svg?style=for-the-badge
-[contributors-url]: https://github.com/github_username/repo_name/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/github_username/repo_name.svg?style=for-the-badge
-[forks-url]: https://github.com/github_username/repo_name/network/members
-[stars-shield]: https://img.shields.io/github/stars/github_username/repo_name.svg?style=for-the-badge
-[stars-url]: https://github.com/github_username/repo_name/stargazers
-[issues-shield]: https://img.shields.io/github/issues/github_username/repo_name.svg?style=for-the-badge
-[issues-url]: https://github.com/github_username/repo_name/issues
-[license-shield]: https://img.shields.io/github/license/github_username/repo_name.svg?style=for-the-badge
-[license-url]: https://github.com/github_username/repo_name/blob/master/LICENSE.txt
+
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/abi-vu/
 [product-screenshot]: images/screenshot.png
@@ -165,15 +160,3 @@ Project Link: [https://github.com/github_username/repo_name](https://github.com/
 [Python-url]: https://www.python.org/
 [MySQL]: https://shields.io/badge/MySQL-lightgrey?logo=mysql&style=plastic&logoColor=white&labelColor=blue
 [MySQL-url]: https://www.mysql.com/
-[Vue.js]: https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D
-[Vue-url]: https://vuejs.org/
-[Angular.io]: https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white
-[Angular-url]: https://angular.io/
-[Svelte.dev]: https://img.shields.io/badge/Svelte-4A4A55?style=for-the-badge&logo=svelte&logoColor=FF3E00
-[Svelte-url]: https://svelte.dev/
-[Laravel.com]: https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white
-[Laravel-url]: https://laravel.com
-[Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
-[Bootstrap-url]: https://getbootstrap.com
-[JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
-[JQuery-url]: https://jquery.com 

@@ -27,11 +27,6 @@
     <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/github_username/repo_name">View Demo</a>
-    ·
-    <a href="https://github.com/github_username/repo_name/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
-    ·
-    <a href="https://github.com/github_username/repo_name/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
   </p>
 </div>
 
@@ -45,21 +40,18 @@
       <a href="#about-the-project">About The Project</a>
       <ul>
         <li><a href="#built-with">Built With</a></li>
+        <li><a href="#folders">Folders structure</a></li>
       </ul>
     </li>
     <li>
       <a href="#getting-started">Getting Started</a>
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
       </ul>
-    </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
+    <li>
+        <a href="data-pipeline-diagram"> Data Pipeline Diagram</a>
+    <li>
+        <a href="dashboards"> Dashboards</a>
   </ol>
 </details>
 
@@ -71,6 +63,25 @@
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
 Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description`
+
+This project leverages a real-world Brazilian e-commerce dataset provided by **O'list** to analyze and visualize sales performance metrics. The dataset, comprising over 100,000 orders from 2016 to 2018, offers insights into overall sales & orders performance.
+
+**Data Processing and Analysis**
+
+To prepare the data for analysis, I performed the following steps:
+
+1. Consolidation: Combined the 9 CSV files into a unified dataset.
+2. Normalization: Standardized data formats and cleaned inconsistencies to ensure data quality.
+3. Data Warehousing: Populated a Snowflake data warehouse with a predesigned schema for efficient querying and analysis.
+
+**Visualization and Insights**
+
+Using Power BI, I developed interactive dashboards that showcase key sales/orders metrics including:
+
+- Sales Performance: Monthly Transactions, Revenue, Average Order Value & Freight Value Per Order.
+- Delivery Performance: Total Late Deliveries, On-time Delivery Rate, Average Days of Delivery and Average NPS. 
+
+These visualizations provide valuable insights for business stakeholders to make data-driven decisions and identify opportunities for growth.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -85,7 +96,21 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+### Folder Structure 
 
+In the repo, there are 3 folders:
+<ol> 
+<li> Olist: Dataset source - 9 csv files.
+<li> Scripts: Contains 4 files, 3 .sql files and 1 .py file
+<ul> 
+    <li> OLTP_tables_create: Online Transaction Processing Tables.
+    <li> DWH_tables_create: Define Dimension and Fact tables.
+    <li> views_create: Define views in order to efficiently read performance if concurrent readingn occurs. <em>(However, I will not use these views to pull from data from PowerBI)</em> 
+    <li> transform_load_scripts: the script to join between tables and populate the Dim/Fact Tables. This file will be read by the file load_script.py 
+</ul>
+<li> diagrams: diagrams of OLTP and DWH in database.
+</ol>
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
 ## Getting Started
@@ -94,28 +119,9 @@ This is an example of how you may give instructions on setting up your project l
 To get a local copy up and running follow these simple example steps.
 
 
-### Installation
+### Prerequisites
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-   ```sh
-   git clone https://github.com/github_username/repo_name.git
-   ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
-5. Change git remote url to avoid accidental pushes to base project
-   ```sh
-   git remote set-url origin github_username/repo_name
-   git remote -v # confirm the changes
-   ```
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+## Data Pipeline Diagram
 
 
 

@@ -1,4 +1,4 @@
-CREATE VIEW OverviewOrders AS
+CREATE VIEW vwOverviewOrders AS
 
 SELECT *,
         CASE

@@ -1,5 +1,5 @@
 import mysql.connector
-from scripts.transform_load_scripts import *
+from Scripts.transform_load_scripts import *
 
 # database credentials
 host = "localhost"

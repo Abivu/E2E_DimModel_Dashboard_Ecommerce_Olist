@@ -45,13 +45,10 @@
     </li>
     <li>
       <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-      </ul>
     <li>
-        <a href="data-pipeline-diagram"> Data Pipeline Diagram</a>
+        <a href="#data-pipeline-diagram"> Data Pipeline Diagram</a>
     <li>
-        <a href="dashboards"> Dashboards</a>
+        <a href="#dashboards"> Dashboards</a>
   </ol>
 </details>
 
@@ -112,24 +109,29 @@ In the repo, there are 3 folders:
 </ol>
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+
+
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+To view the PowerBI Dashboards in this repository, it's required Power BI Desktop installed. You can download the application for free on [PowerBI Desktop](https://www.microsoft.com/en-us/power-platform/products/power-bi/desktop).
 
-
-### Prerequisites
+Once successfully installed, download a dashboard file with extension .pbix. Then, open it and start exploring the dashboard.
 
 ## Data Pipeline Diagram
 
+![](./diagrams/Olist.png)
 
+## Dashboard
 
+### Preview 
+![alt text](image.png)
 
+![alt text](image-1.png)
 
+![alt text](image-2.png)
 
-
-
+[**Click to download the file**](./Dashboard/)
 
 <!-- CONTACT -->
 ## Contact
@@ -141,15 +143,6 @@ Project Link: [https://github.com/github_username/repo_name](https://github.com/
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-
-<!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
-
-* []()
-* []()
-* []()
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 

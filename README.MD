@@ -42,9 +42,9 @@
       </ul>
     </li>
     <li>
-      <a href="#getting-started">Getting Started</a>
-    <li>
         <a href="#data-pipeline-diagram"> Data Pipeline Diagram</a>
+    <li>
+      <a href="#getting-started">Getting Started</a>
     <li>
         <a href="#dashboards"> Dashboards</a>
     <li>
@@ -60,9 +60,11 @@
 <!-- [![Product Name Screen Shot][product-screenshot]](https://example.com)-->
 
 
-This project leverages a real-world Brazilian e-commerce dataset provided by **O'list** to analyze and visualize sales performance metrics. The dataset, comprising over 100,000 orders from 2016 to 2018, offers insights into overall sales & delivery performance.
+This project leverages a real-world Brazilian e-commerce dataset provided by **O'list**. The dataset, comprising over 100,000 orders from 2016 to 2018. Its input consists of 9 separate csv files and the desired outputs are a data pipeline, processing the raw data, consolidate and store it at a data warehouse and ultimately presents it in a business intelligence (BI) tool for visualization.
 
-**Data Processing and Analysis**
+There are two stages at this phase:
+
+**- Data Processing and Analysis**
 
 To prepare the data for analysis, I performed the following steps:
 
@@ -73,7 +75,7 @@ To prepare the data for analysis, I performed the following steps:
 
 **!Note:** Data Quality Assessment will be implemented in the next phase of this project.
 
-**Visualization and Insights**
+**- Visualization and Insights**
 
 Using Power BI, I transformed data & developed interactive dashboards that showcase key sales/orders metrics including:
 
@@ -103,9 +105,9 @@ In the repo, there are 3 folders:
 <li> Olist: Dataset source - 9 csv files.
 <li> Scripts: Contains 4 files, 3 .sql files and 1 .py file
 <ul> 
-    <li> OLTP_tables_create: Online Transaction Processing Tables.
-    <li> DWH_tables_create: Define Dimension and Fact tables.
-    <li> views_create: Define views in order to efficiently read performance if concurrent readingn occurs. <em>(However, I will not use these views to pull data from PowerBI)</em> 
+    <li> OLTP_tables_create: Online Transaction Processing Tables (OLTP) The tables is the first destination to store raw data in the database.
+    <li> DWH_tables_create: Define Dimension and Fact tables. The tables after preprocessed are stored in these tables.
+    <li> views_create: Define views in order to efficiently read performance if concurrent readingn occurs. <em>(However, I will not use these views to pull data from PowerBI, but it is neccessary in real-life data pipeline)</em> 
     <li> transform_load_scripts: the script to join between tables and populate the Dim/Fact Tables. This file will be read by the file load_script.py 
 </ul>
 <li> diagrams: diagrams of OLTP and DWH in database and data pipeline architecture.
@@ -113,6 +115,9 @@ In the repo, there are 3 folders:
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
+## Data Pipeline Diagram
+
+![](./diagrams/Olist.png)
 
 <!-- GETTING STARTED -->
 ## Getting Started
@@ -121,9 +126,6 @@ To view the PowerBI Dashboards in this repository, it's required Power BI Deskto
 
 Once successfully installed, download a dashboard file with extension .pbix. Then, open it and start exploring the dashboard.
 
-## Data Pipeline Diagram
-
-![](./diagrams/Olist.png)
 
 ## Dashboard
 
